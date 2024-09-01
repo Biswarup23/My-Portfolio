@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/dbe4333937.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#About">About me</a></li>
+                    <li><a href="#About">Skills</a></li>
+                    <li><a href="#Projects">Projects</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                    <i class="fa-solid fa-circle-xmark" onclick="Closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="Openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Hello!</p>
+                <h1>I'm <span>Biswarup</span><br><span> Mandal </span> recent graduate in CSE.</h1>
+                <h3>Interested in the field of </h3>
+                <br>
+
+               
+
+                <span id="typing-animation"></span>
+                
+
+						<script>
+
+						
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						
+            
+						const typingTexts = [
+
+						'Software Engineering...',
+						'Software Testing...',
+						'Data Analyst',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+                        setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+                        
+                       
+
+						</script>
+                        
+            </div>
+        </div>
+
+    </div>
+
+<div id="About">
+    <div class="container">
+        <div class="row">
+            <div class="about_col-1">
+                <img src="images/ran.png">
+            </div>
+            <div class="about_col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Enthusiastic Computer Science & Engineering graduate with a CGPA of 8.80 from MSIT, Kolkata. Skilled in Java, OOPs, SQL, and DBMS. I've applied these skills in projects like Brain Tumor Detection using MRI and an e-commerce sales report, honing my ability to analyze data and solve complex problems. Eager to learn from my seniors and IT professionals, I am passionate about Software Engineering, Software Testing, and Data Analysis, and I'm ready to contribute to a dynamic team.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('Internships')">Internships</p>
+                    <p class="tab-links " onclick="opentab('Skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('Education')">Education</p>
+                </div>
+                <div class="tab-contains active-tab" id="Internships">
+                    <ul>
+                        <li><span>Dec 2023 - Feb 2024</span><br>Data Analyst at Prepinsta Technologies PVT.LTD</li>
+                        <p>•    Analyzed ecommerce data from CSV files to extract insights that improved business operations.</p>
+                        <p>•   Created data visualization dashboards to highlight sales trends, customer behavior, and product performance.</p>
+                        <p>•   Identified areas for improvement in sales and marketing strategies, leading to increased revenue</p></li>
+
+                        <!-- 2nd Internship-->
+                        <li><span>Jan 2023 - May 2023</span><br>Machine Learning using Python at Ardent Computech PVT.LTD</li>
+                        <p>•    Developed and implemented a machine learning model to detect brain tumors from MRI scans using Python and TensorFlow.</p>
+                        <p>•	Preprocessed medical imaging data to achieve a detection accuracy of over 90%, aiding in early diagnosis and treatment planning in healthcare.</p></li>
+                    </ul>
+                </div>
+            <div class="tab-contains" id="Skills">
+                <ul>
+                    <li><span>Programming Languages</span><br> Java (Preferred), C, Python </li>
+                    <li><span>Database</span><br> SQL </li>
+                    <li><span>Tools</span><br> MS Excel (Learning), Power BI (Learning) </li>
+                    <li><span>Coursework</span><br>DBMS, OOPs </li>
+                </ul>
+            </div>
+            <div class="tab-contains" id="Education">
+                <ul>
+                    <li><span>2020 - 2024</span><br>B.Tech in CSE from Meghnad Saha Institute of Technology, Kolkata</li>
+                    <li><span>2020</span><br>12th from Maria's Day School, Howrah</li>
+                    <li><span>2018</span><br>10th from Maria's Day School, Howrah</li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!------Projects-->
+<div id="Projects">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="Projects-List">
+            <div class="Project">
+                <img src="images/br.jpg">
+                <div class="layer">
+                    <h3>Brain Tumer Detection</h3>
+                    <p>•	Contributed to the development of a Brain Tumor Detection system, utilizing MRI images to train and validate a Convolutional Neural Network (CNN) algorithm for accurate identification of tumors.</p>
+                    <br>
+                        <p>•	Implemented the CNN algorithm to enhance the system's capability in detecting the presence or absence of brain tumors with high accuracy.</p>
+                    <a href="https://github.com/Biswarup23/Brain_Tumer-Detection"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="Project">
+                <img src="images/Drone.png">
+                <div class="layer">
+                    <h3>Integrating Computer Vision algorithm and Drone Technology for wildlife monitoring</h3>
+                    <p>•    Developed a real-time wildlife identification and tracking system using YOLO-v8 in video streams, enabling researchers to monitor wildlife migration patterns and detect poaching activities efficiently.</p>
+                    <br>
+                    <p>•    Designed drones equipped with high-resolution cameras for aerial surveillance in remote and inaccessible regions, providing enhanced coverage for wildlife monitoring.</p>
+                    <a href="https://github.com/Biswarup23/Wildlife-monitoring-and-Poaching-detection-using-yolo_v8-with-Drone-Technology"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="Project">
+                <img src="images/car.jpeg">
+                <div class="layer">
+                    <h3>Car Rental System</h3>
+                    <p>•    Developed a scalable and maintainable Car Rental System using Java, leveraging Object-Oriented Programming principles to implement key features like renting, returning cars, real-time availability checks, and customer management.</p>
+                    <br>
+                    <p>•    Enhanced the system's functionality and user experience by successfully integrating payment gateways, utilizing Java collections and object-oriented design for efficient processing..</p>
+                    <a href="https://github.com/Biswarup23/Car-Rental-System">
+                    <i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="https://github.com/Biswarup23?tab=repositories" class="btn">See more</a>
+    </div>
+</div>
+<!---  -----Contact------ ---->
+<div id="Contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i></i>biswarup02mandal@gmail.com</p>
+                <p><i class="fa-brands fa-square-whatsapp"></i>+91- 8334959550</p>
+                <div class="social-media">
+                    <a href="https://www.facebook.com/profile.php?id=100029820850477"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/0323biswarup/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://twitter.com/Biswa2303"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/biswarup-mandal-4b506a233/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/Biswarup23"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <a href="images/Biswarup Mandal.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Email id" required>
+                    <textarea name="Message" rows="6" placeholder="Send me a message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                    
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<script src="app.js"></script>
+</body>
+</html>
